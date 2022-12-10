@@ -1,5 +1,8 @@
 [build-system]
-requires = ["scikit-build-core"]
+requires = [
+    "scikit-build-core",
+    "mpi4py-mpich",
+]
 build-backend = "scikit_build_core.build"
 
 [project]
@@ -15,6 +18,7 @@ cmake.args = [
     "-D PKG_KSPACE=ON",
     "-D LAMMPS_EXCEPTIONS=ON",
     "-D BUILD_SHARED_LIBS=ON",
+    "-D BUILD_MPI=ON",
 ]
 
 [tool.cibuildwheel]
