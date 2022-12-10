@@ -8,6 +8,7 @@ version = "2022.6.23.2.0"
 
 [tool.scikit-build]
 wheel.install-dir = "lammps"
+wheel.py-api = "py2.py3"
 cmake.args = [
     "-DLAMMPS_VERSION=stable_23Jun2022_update2",
 ]
@@ -16,7 +17,6 @@ cmake.args = [
 build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
-wheel.py-api = "py2.py3"
 
 [tool.cibuildwheel.linux]
 before-all = [
