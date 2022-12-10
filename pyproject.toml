@@ -15,3 +15,22 @@ cmake.args = [
 [tool.cibuildwheel]
 build = ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
+
+[tool.cibuildwheel.linux]
+before-all = [
+    "yum install -y wget libpng12-devel zlib-devel libjpeg-devel",
+]
+
+[tool.cibuildwheel.macos]
+
+before-all = [
+'''if [[ "$CIBW_BUILD" == *macosx_arm64* ]]; then
+    install_arm=( libpng zlib libjpeg )
+    for i in "${install_arm[@]}"; do
+        response=$(brew fetch --force --bottle-tag=arm64_big_sur $i | grep Downloaded )
+        download_path=$(echo $response | xargs -n 1 | tail -1)
+        brew reinstall $download_path
+    done
+fi
+'''
+]
