@@ -13,8 +13,11 @@ cmake.args = [
 ]
 
 [tool.cibuildwheel]
-build = ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*"]
+build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
+before-build = "pip install -r requirements-repair.txt"
+repair-wheel-command = "python scripts/repair_wheel.py -w {dest_dir} {wheel}"
+build-verbosity = "1"
 
 [tool.cibuildwheel.linux]
 before-all = [
