@@ -15,9 +15,8 @@ cmake.args = [
 [tool.cibuildwheel]
 build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
-before-build = "pip install -r requirements-repair.txt"
-repair-wheel-command = "python scripts/repair_wheel.py -w {dest_dir} {wheel}"
 build-verbosity = "1"
+wheel.py-api = "py2.py3"
 
 [tool.cibuildwheel.linux]
 before-all = [
