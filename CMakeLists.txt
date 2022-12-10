@@ -10,6 +10,6 @@ FetchContent_Declare(lammps
 FetchContent_GetProperties(lammps)
 if(NOT lammps_POPULATED)
   FetchContent_Populate(lammps)
-  add_subdirectory(${lammps_SOURCE_DIR} ${lammps_BINARY_DIR})
+  add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
 endif()
 
