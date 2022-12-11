@@ -6,6 +6,9 @@ build-backend = "scikit_build_core.build"
 name = "lammps"
 version = "2022.6.23.2.0"
 
+[project.scripts]
+lmp = "lmp.executable:lmp"
+
 [tool.scikit-build]
 wheel.install-dir = "lammps"
 wheel.py-api = "py2.py3"
@@ -21,6 +24,7 @@ cmake.args = [
 build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
+test-command = "lmp -h"
 
 [tool.cibuildwheel.linux]
 before-all = [
