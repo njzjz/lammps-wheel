@@ -10,7 +10,13 @@ version = "2022.6.23.2.0"
 wheel.install-dir = "lammps"
 wheel.py-api = "py2.py3"
 cmake.args = [
-    "-DLAMMPS_VERSION=stable_23Jun2022_update2",
+    "-D LAMMPS_VERSION=stable_23Jun2022_update2",
+    "-D PKG_PLUGIN=ON",
+    "-D PKG_KSPACE=ON",
+    "-D LAMMPS_EXCEPTIONS=ON",
+    "-D BUILD_SHARED_LIBS=ON",
+    "-D LAMMPS_INSTALL_RPATH=ON",
+    "-D PKG_PYTHON=ON",
 ]
 
 [tool.cibuildwheel]
