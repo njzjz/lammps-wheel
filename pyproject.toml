@@ -16,7 +16,6 @@ cmake.args = [
     "-D LAMMPS_EXCEPTIONS=ON",
     "-D BUILD_SHARED_LIBS=ON",
     "-D LAMMPS_INSTALL_RPATH=ON",
-    "-D PKG_PYTHON=ON",
 ]
 
 [tool.cibuildwheel]
