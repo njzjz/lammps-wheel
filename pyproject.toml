@@ -15,11 +15,6 @@ cmake.args = [
     "-D PKG_KSPACE=ON",
     "-D LAMMPS_EXCEPTIONS=ON",
     "-D BUILD_SHARED_LIBS=ON",
-    "-D CMAKE_INSTALL_RPATH_USE_LINK_PATH=ON",
-    "-D CMAKE_INSTALL_RPATH=$ORIGIN",
-    "-D CMAKE_MACOSX_RPATH=ON",
-    "-D CMAKE_INSTALL_BINDIR=.",
-    "-D CMAKE_INSTALL_LIBDIR=.",
 ]
 
 [tool.cibuildwheel]
