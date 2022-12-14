@@ -27,7 +27,7 @@ cmake.args = [
 build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
-test-command = "lmp -h && python -c 'from lammps import PyLammps'"
+test-command = "lmp -h && python {project}/tests/test_import.py"
 
 [tool.cibuildwheel.linux]
 before-all = [
@@ -47,3 +47,6 @@ before-all = [
 fi
 '''
 ]
+
+[tool.cibuildwheel.windows]
+test-command = "python {project}/tests/test_import.py"

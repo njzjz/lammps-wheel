@@ -30,4 +30,5 @@ def _program(name, args):
 
 
 def lmp():
-    raise SystemExit(_program('lmp', sys.argv[1:]))
+    suffix = '.exe' if os.name == 'nt' else ''
+    raise SystemExit(_program('lmp' + suffix, sys.argv[1:]))
