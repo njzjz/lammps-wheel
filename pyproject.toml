@@ -5,6 +5,9 @@ build-backend = "scikit_build_core.build"
 [project]
 name = "lammps"
 version = "2022.6.23.2.0"
+dependencies = [
+    'importlib_metadata>=1.4; python_version < "3.8"',
+]
 
 [project.scripts]
 lmp = "lammps.executable:lmp"
