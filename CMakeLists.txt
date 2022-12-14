@@ -25,8 +25,8 @@ if(NOT lammps_POPULATED)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
   install(
     DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
-    PATTERN "__init__.py" EXCLUDE      
     DESTINATION .
+    PATTERN "__init__.py" EXCLUDE
   )
 endif()
 
