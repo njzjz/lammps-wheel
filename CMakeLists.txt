@@ -26,7 +26,7 @@ if(NOT lammps_POPULATED)
   install(
     DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
     DESTINATION .
-    PATTERN "__init__.py" EXCLUDE
+    REGEX "^__init__\\.py$" EXCLUDE
   )
 endif()
 
