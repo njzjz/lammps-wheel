@@ -14,8 +14,15 @@ try:
     eps = metadata.entry_points(group='lammps.plugins')
 except TypeError:
     eps = metadata.entry_points().get('lammps.plugins', [])
+plugins = []
 for ep in eps:
     plugin = ep.load()
+    plugins.append(plugin())
+if len(plugins):
+    old_path = os.environ.get("LAMMPS_PLUGIN_PATH", "")
+    if old_path:
+        plugins.append(old_path)
+    os.environ["LAMMPS_PLUGIN_PATH"] = ":".join(plugins)
 
 
 def _program(name, args):
