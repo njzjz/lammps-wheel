@@ -26,7 +26,11 @@ if(NOT lammps_POPULATED)
   install(
     DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
     DESTINATION .
-    REGEX "^__init__\\.py$" EXCLUDE
+  )
+  # override
+  install(
+    DIRECTORY ${CMAKE_SOURCE_DIR}/lammps/
+    DESTINATION .
   )
 endif()
 
