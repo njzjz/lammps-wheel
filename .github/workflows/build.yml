@@ -18,3 +18,4 @@ jobs:
           python-version: 3
       - name: Install package
         run: pip install -v .
+      - run: lmp -h

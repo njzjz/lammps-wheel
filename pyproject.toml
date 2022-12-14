@@ -1,10 +1,13 @@
 [build-system]
-requires = ["scikit-build-core"]
+requires = ["scikit-build-core @ git+https://github.com/njzjz/scikit-build-core@entry_points.txt"]
 build-backend = "scikit_build_core.build"
 
 [project]
 name = "lammps"
 version = "2022.6.23.2.0"
+
+[project.scripts]
+lmp = "lammps.executable:lmp"
 
 [tool.scikit-build]
 wheel.install-dir = "lammps"
@@ -21,6 +24,7 @@ cmake.args = [
 build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
+test-command = "lmp -h"
 
 [tool.cibuildwheel.linux]
 before-all = [
