@@ -23,5 +23,14 @@ FetchContent_GetProperties(lammps)
 if(NOT lammps_POPULATED)
   FetchContent_Populate(lammps)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
+  install(
+    DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
+    DESTINATION .
+  )
+  # override
+  install(
+    DIRECTORY ${CMAKE_SOURCE_DIR}/lammps/
+    DESTINATION .
+  )
 endif()
 

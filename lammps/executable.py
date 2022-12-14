@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 
-ROOT_DIR = os.path.join(os.path.dirname(__file__), '..')
+ROOT_DIR = os.path.dirname(__file__)
 
 
 def _program(name, args):
