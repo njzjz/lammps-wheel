@@ -47,3 +47,6 @@ before-all = [
 fi
 '''
 ]
+
+[tool.cibuildwheel.windows]
+test-command = "lmp.exe -h && python.exe -c 'from lammps import PyLammps'"
