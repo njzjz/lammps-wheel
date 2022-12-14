@@ -23,6 +23,10 @@ FetchContent_GetProperties(lammps)
 if(NOT lammps_POPULATED)
   FetchContent_Populate(lammps)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
-  install(DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/ DESTINATION .)
+  install(
+    DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
+    PATTERN "__init__.py" EXCLUDE      
+    DESTINATION .
+  )
 endif()
 
