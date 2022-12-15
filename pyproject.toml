@@ -50,3 +50,4 @@ fi
 
 [tool.cibuildwheel.windows]
 test-command = "python {project}/tests/test_import.py"
+environment = { CMAKE_ARGS = "-DCMAKE_Fortran_COMPILER:PATH=C:\\ProgramData\\Chocolatey\\bin\\gfortran.exe" }
