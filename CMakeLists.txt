@@ -23,6 +23,10 @@ FetchContent_GetProperties(lammps)
 if(NOT lammps_POPULATED)
   FetchContent_Populate(lammps)
   include(${lammps_SOURCE_DIR}/cmake/presets/most.cmake)
+  if (WIN32)
+    set(PKG_ML-POD OFF)
+    set(PKG_ELECTRODE OFF)
+  endif(WIN32)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
   install(
     DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
