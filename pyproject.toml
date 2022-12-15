@@ -31,7 +31,7 @@ test-command = "lmp -h && python {project}/tests/test_import.py"
 
 [tool.cibuildwheel.linux]
 before-all = [
-    "yum install -y wget libpng12-devel zlib-devel libjpeg-devel",
+    "yum install -y wget libpng12-devel zlib-devel libjpeg-devel mpich-devel",
 ]
 
 [tool.cibuildwheel.macos]
@@ -44,6 +44,8 @@ before-all = [
         download_path=$(echo $response | xargs -n 1 | tail -1)
         brew reinstall $download_path
     done
+else
+    brew install mpich
 fi
 '''
 ]
