@@ -38,7 +38,7 @@ before-all = [
 
 before-all = [
 '''if [[ "$CIBW_BUILD" == *macosx_arm64* ]]; then
-    install_arm=( libpng zlib jpeg-turbo mpich )
+    install_arm=( libpng zlib jpeg-turbo )
     for i in "${install_arm[@]}"; do
         response=$(brew fetch --force --bottle-tag=arm64_big_sur $i | grep Downloaded )
         download_path=$(echo $response | xargs -n 1 | tail -1)
@@ -54,7 +54,6 @@ fi
 before-all = [
     "curl -L -O https://github.com/microsoft/Microsoft-MPI/releases/download/v10.1.1/msmpisetup.exe",
     ".\\msmpisetup.exe -unattend -force",
-    'Test-Path "C:\\Program Files\\Microsoft MPI\\Bin\\mpiexec.exe" -PathType leaf',
     'echo "C:\\Program Files\\Microsoft MPI\\Bin\\" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append',
 ]
 test-command = "python {project}/tests/test_import.py"
