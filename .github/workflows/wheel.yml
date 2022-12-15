@@ -53,6 +53,12 @@ jobs:
         name: Install Python
         with:
           python-version: '3.11'
+      - uses: awvwgk/setup-fortran@main
+        id: setup-fortran
+        if: matrix.os == 'windows-latest'
+        with:
+          compiler: gcc
+          version: 11
       - name: Setup MPI
         uses: mpi4py/setup-mpi@v1
         if: matrix.os == 'windows-latest'
