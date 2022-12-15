@@ -58,6 +58,11 @@ jobs:
         if: matrix.os == 'windows-latest'
         with:
           mpi: msmpi
+      - uses: msys2/setup-msys2@v2
+        if: matrix.os == 'windows-latest'
+        with:
+          update: true
+          install: zlib
 
       - run: python -m pip install cibuildwheel==2.11.3
       - name: Build wheels
