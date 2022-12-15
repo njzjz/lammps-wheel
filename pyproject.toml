@@ -51,8 +51,4 @@ fi
 ]
 
 [tool.cibuildwheel.windows]
-before-all = [
-    "curl -L -O https://github.com/microsoft/Microsoft-MPI/releases/download/v10.1.1/msmpisetup.exe",
-    ".\\msmpisetup.exe -unattend -force",
-]
 test-command = "python {project}/tests/test_import.py"
