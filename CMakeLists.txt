@@ -27,6 +27,7 @@ if(NOT lammps_POPULATED)
     set(PKG_ML-POD OFF)
     set(PKG_ELECTRODE OFF)
     set(PKG_COMPRESS OFF)
+    set(PKG_VORONOI OFF)
   endif(WIN32)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
   install(
