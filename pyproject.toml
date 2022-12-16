@@ -53,7 +53,7 @@ before-all = [
     "yum install -y wget libpng12-devel zlib-devel libjpeg-devel mpich-devel",
 ]
 environment = {
-    MPI_HOME: "/usr/lib64/mpich",
+    MPI_HOME = "/usr/lib64/mpich",
 }
 
 [tool.cibuildwheel.macos]
