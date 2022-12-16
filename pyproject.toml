@@ -1,5 +1,5 @@
 [build-system]
-requires = ["scikit-build-core @ git+https://github.com/njzjz/scikit-build-core@entry_points.txt"]
+requires = ["scikit-build-core>=0.1.4"]
 build-backend = "scikit_build_core.build"
 
 [project]
