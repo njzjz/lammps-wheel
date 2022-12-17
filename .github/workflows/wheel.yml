@@ -28,20 +28,6 @@ jobs:
           - os: ubuntu-latest
             python: 311
             platform_id: manylinux_ppc64le
-          # macos-x86-64
-          - os: macos-latest
-            python: 311
-            platform_id: macosx_x86_64
-          # macos-arm64
-          - os: macos-latest
-            bitness: 64
-            python: 311
-            platform_id: macosx_arm64
-          # win64
-          - os: windows-latest
-            bitness: 64
-            python: 311
-            platform_id: win_amd64
     steps:
       - uses: actions/checkout@v3
         with:

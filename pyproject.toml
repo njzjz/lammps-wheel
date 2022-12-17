@@ -3,7 +3,7 @@ requires = ["scikit-build-core>=0.1.4"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "lammps"
+name = "lammps_manylinux_2_28"
 version = "2022.6.23.2.2"
 description = "unoffical LAMMPS Molecular Dynamics Python package"
 authors = [
@@ -53,6 +53,9 @@ before-all = [
     "yum install -y wget libpng12-devel zlib-devel libjpeg-devel mpich-devel",
 ]
 environment = { MPI_HOME = "/usr/lib64/mpich" }
+manylinux-x86_64-image = "manylinux_2_28"
+manylinux-ppc64le-image = "manylinux_2_28"
+manylinux-aarch64-image = "manylinux_2_28"
 
 [tool.cibuildwheel.macos]
 
