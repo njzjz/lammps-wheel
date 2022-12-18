@@ -50,7 +50,7 @@ test-command = "lmp -h && python {project}/tests/test_import.py"
 
 [tool.cibuildwheel.linux]
 before-all = [
-    "yum install -y wget libpng12-devel zlib-devel libjpeg-devel mpich-devel",
+    "yum install -y wget libpng-devel zlib-devel libjpeg-devel mpich-devel",
 ]
 environment = { MPI_HOME = "/usr/lib64/mpich" }
 manylinux-x86_64-image = "manylinux_2_28"
