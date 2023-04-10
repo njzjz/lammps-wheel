@@ -47,13 +47,11 @@ build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
 test-command = "lmp -h && python {project}/tests/test_import.py"
-manylinux-x86_64-image = "quay.io/pypa/manylinux2014_x86_64@sha256:005826a6fa94c97bd31fccf637a0f10621304da447ca2ab3963c13991dffa013"
-manylinux-aarch64-image = "quay.io/pypa/manylinux2014_aarch64@sha256:005826a6fa94c97bd31fccf637a0f10621304da447ca2ab3963c13991dffa013"
-manylinux-ppc64le-image = "quay.io/pypa/manylinux2014_ppc64le@sha256:005826a6fa94c97bd31fccf637a0f10621304da447ca2ab3963c13991dffa013"
 
 [tool.cibuildwheel.linux]
 before-all = [
     "yum install -y wget libpng12-devel zlib-devel libjpeg-devel mpich-devel",
+    "python -m pip install git+https://github.com/NixOS/patchelf",
 ]
 environment = { MPI_HOME = "/usr/lib64/mpich" }
 
