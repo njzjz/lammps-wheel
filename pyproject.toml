@@ -47,6 +47,9 @@ build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
 test-command = "lmp -h && python {project}/tests/test_import.py"
+manylinux-x86_64-image = "quay.io/pypa/manylinux2014:2023-04-24-b8379f4"
+manylinux-aarch64-image = "quay.io/pypa/manylinux2014:2023-04-24-b8379f4"
+manylinux-ppc64le-image = "quay.io/pypa/manylinux2014:2023-04-24-b8379f4"
 
 [tool.cibuildwheel.linux]
 before-all = [
