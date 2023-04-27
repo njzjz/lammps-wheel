@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "lammps_manylinux_2_28"
-version = "2022.6.23.3.1"
+version = "2022.6.23.4.0"
 description = "unoffical LAMMPS Molecular Dynamics Python package"
 authors = [
   {name = "The LAMMPS Developers", email = "developers@lammps.org"},
@@ -37,7 +37,7 @@ lmp = "lammps.executable:lmp"
 wheel.install-dir = "lammps"
 wheel.py-api = "py2.py3"
 cmake.args = [
-    "-D LAMMPS_VERSION=8160bfb589fad2c27e4af350e1c8981c4f901b23",
+    "-D LAMMPS_VERSION=93fc33a5504ff56186c266926490d32d3ed2b700",
     "-D LAMMPS_EXCEPTIONS=ON",
     "-D BUILD_SHARED_LIBS=ON",
 ]
