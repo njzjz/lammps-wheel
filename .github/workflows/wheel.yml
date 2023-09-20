@@ -43,7 +43,7 @@ jobs:
             python: 311
             platform_id: win_amd64
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - uses: docker/setup-qemu-action@v3
@@ -72,7 +72,7 @@ jobs:
     name: Build source distribution
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - uses: actions/setup-python@v4
