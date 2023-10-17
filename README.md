@@ -1,5 +1,10 @@
 # LAMMPS unofficial wheels
 
+[![Pypi version](https://img.shields.io/pypi/v/lammps)](https://pypi.org/project/lammps/)
+[![Pypi downloads](https://img.shields.io/pypi/dm/lammps)](https://pypi.org/project/lammps/)
+[![Pypi downloads](https://img.shields.io/pypi/dw/lammps)](https://pypi.org/project/lammps/)
+[![Pypi downloads](https://img.shields.io/pypi/dd/lammps)](https://pypi.org/project/lammps/)
+
 This unofficial repository holds the code to build [LAMMPS](https://www.lammps.org/) platform wheels for Linux, macOS, and Windows. LAMMPS can easily be installed using
 
 ```sh
