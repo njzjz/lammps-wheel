@@ -21,7 +21,7 @@ The package requires Python 3.7 and above. Most packages are enabled in this dis
 | Linux   | aarch64 | 64  | glibc >= 2.17  | MPICH         |
 | Linux   | ppc64le | 64  | glibc >= 2.17  | MPICH         |
 | macOS   | x86_64  | 64  | >= macOS-11    | MPICH         | 
-| macOS   | arm64   | 64  | >= macOS-11    | -             |  
+| macOS   | arm64   | 64  | >= macOS-11    | MPICH         |  
 | Windows | amd64   | 64  |                | Microsoft MPI |
 
 To use MPI, it is required to use the same MPI as what the package was built against.

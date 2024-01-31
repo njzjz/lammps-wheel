@@ -60,17 +60,7 @@ environment = { MPI_HOME = "/usr/lib64/mpich" }
 [tool.cibuildwheel.macos]
 
 before-all = [
-'''if [[ "$CIBW_BUILD" == *macosx_arm64* ]]; then
-    install_arm=( libpng zlib jpeg-turbo zstd voro++ )
-    for i in "${install_arm[@]}"; do
-        response=$(brew fetch --force --bottle-tag=arm64_big_sur $i | grep Downloaded )
-        download_path=$(echo $response | xargs -n 1 | tail -1)
-        brew reinstall $download_path
-    done
-else
-    brew install mpich
-fi
-'''
+    '''brew install mpich''',
 ]
 
 [tool.cibuildwheel.windows]
