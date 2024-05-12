@@ -29,6 +29,12 @@ if(NOT lammps_POPULATED)
     set(PKG_COMPRESS OFF)
     set(PKG_VORONOI OFF)
   endif(WIN32)
+  if(APPLE)
+    # brew install has wrong deployment version
+    set(WITH_JPEG OFF)
+    set(WITH_PNG OFF)
+    set(WITH_GZIP OFF)
+  endif(APPLE)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
   install(
     DIRECTORY ${lammps_SOURCE_DIR}/python/lammps/
