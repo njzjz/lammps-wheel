@@ -34,6 +34,7 @@ if(NOT lammps_POPULATED)
     set(WITH_JPEG OFF CACHE BOOL "jpeg")
     set(WITH_PNG OFF CACHE BOOL "png")
     set(WITH_GZIP OFF CACHE BOOL "gzip")
+    SET(PKG_COMPRESS OFF CACHE BOOL "pkg compress")
   endif(APPLE)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
   install(
