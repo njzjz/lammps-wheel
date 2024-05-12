@@ -56,7 +56,6 @@ before-all = [
     "yum install -y wget libpng12-devel zlib-devel libjpeg-devel",
     '''pip install -i https://pypi.anaconda.org/mpi4py/simple mpich''',
 ]
-environment = { MPI_HOME = "/usr/lib64/mpich" }
 
 [tool.cibuildwheel.macos]
 
