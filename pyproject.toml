@@ -60,7 +60,7 @@ environment = { MPI_HOME = "/usr/lib64/mpich" }
 [tool.cibuildwheel.macos]
 
 before-all = [
-    '''conda install -y mpich -c conda-forge''',
+    '''pip install -i https://pypi.anaconda.org/mpi4py/simple mpich''',
 ]
 
 [tool.cibuildwheel.windows]
