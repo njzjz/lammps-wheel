@@ -31,9 +31,9 @@ if(NOT lammps_POPULATED)
   endif(WIN32)
   if(APPLE)
     # brew install has wrong deployment version
-    set(WITH_JPEG OFF)
-    set(WITH_PNG OFF)
-    set(WITH_GZIP OFF)
+    set(WITH_JPEG OFF CACHE BOOL "jpeg")
+    set(WITH_PNG OFF CACHE BOOL "png")
+    set(WITH_GZIP OFF CACHE BOOL "gzip")
   endif(APPLE)
   add_subdirectory(${lammps_SOURCE_DIR}/cmake ${lammps_BINARY_DIR})
   install(
