@@ -37,7 +37,7 @@ lmp = "lammps.executable:lmp"
 wheel.install-dir = "lammps"
 wheel.py-api = "py2.py3"
 cmake.args = [
-    "-D LAMMPS_VERSION=stable_2Aug2023_update3",
+    "-D LAMMPS_VERSION=stable_29Aug2024",
     "-D LAMMPS_EXCEPTIONS=ON",
     "-D BUILD_SHARED_LIBS=ON",
 ]
