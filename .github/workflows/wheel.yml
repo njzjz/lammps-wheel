@@ -21,7 +21,7 @@ jobs:
             python: 311
             platform_id: manylinux_x86_64
           # linux-aarch64
-          - os: ubuntu-latest
+          - os: ubuntu-24.04-arm
             python: 311
             platform_id: manylinux_aarch64
           # linux-ppc64le
@@ -48,7 +48,7 @@ jobs:
           submodules: true
       - uses: docker/setup-qemu-action@v3
         name: Setup QEMU
-        if: matrix.platform_id == 'manylinux_aarch64' || matrix.platform_id == 'manylinux_ppc64le'
+        if: matrix.platform_id == 'manylinux_ppc64le'
       - uses: actions/setup-python@v5
         name: Install Python
         with:
