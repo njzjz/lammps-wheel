@@ -24,10 +24,6 @@ jobs:
           - os: ubuntu-24.04-arm
             python: 311
             platform_id: manylinux_aarch64
-          # linux-ppc64le
-          - os: ubuntu-latest
-            python: 311
-            platform_id: manylinux_ppc64le
           # macos-x86-64
           - os: macos-13
             python: 311
