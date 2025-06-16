@@ -64,6 +64,7 @@ CMAKE_PREFIX_PATH="/opt/python/cp38-cp38/"
 before-all = [
     '''pip install -i https://pypi.anaconda.org/mpi4py/simple mpich''',
 ]
+environment.MACOSX_DEPLOYMENT_TARGET = "11.0"
 
 [tool.cibuildwheel.windows]
 test-command = "python {project}/tests/test_import.py"
