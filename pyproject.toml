@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "unoffical LAMMPS Molecular Dynamics Python package"
 authors = [
   {name = "The LAMMPS Developers", email = "developers@lammps.org"},
-  {name = "Jinzhe Zeng", email = "jinzhe.zeng@rutgers.edu"},
+  {name = "Jinzhe Zeng", email = "jinzhe.zeng@ustc.edu.cn"},
 ]
 license = {file = "LICENSE"}
 classifiers = [
