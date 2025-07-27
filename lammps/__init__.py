@@ -11,4 +11,4 @@ from .core import *                     # lgtm [py/polluting-import]
 from .data import *                     # lgtm [py/polluting-import]
 from .pylammps import *                 # lgtm [py/polluting-import]
 
-__version__ = 20240829
+__version__ = 20250722
