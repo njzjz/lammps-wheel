@@ -58,6 +58,7 @@ before-all = [
 ]
 [tool.cibuildwheel.linux.environment]
 CMAKE_PREFIX_PATH="/opt/python/cp38-cp38/"
+PYTHONDEVMODE="1"
 
 [tool.cibuildwheel.macos]
 
