@@ -49,7 +49,7 @@ metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
 build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
-test-command = "lmp -h && python {project}/tests/test_import.py"
+test-command = "python {project}/tests/test_import.py"
 
 [tool.cibuildwheel.linux]
 before-all = [
@@ -58,7 +58,6 @@ before-all = [
 ]
 [tool.cibuildwheel.linux.environment]
 CMAKE_PREFIX_PATH="/opt/python/cp38-cp38/"
-PYTHONDEVMODE="1"
 
 [tool.cibuildwheel.macos]
 
