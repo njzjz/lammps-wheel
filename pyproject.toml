@@ -37,7 +37,7 @@ lmp = "lammps.executable:lmp"
 wheel.install-dir = "lammps"
 wheel.py-api = "py2.py3"
 cmake.args = [
-    "-D LAMMPS_VERSION=stable_29Aug2024_update3",
+    "-D LAMMPS_VERSION=stable_22Jul2025",
     "-D LAMMPS_EXCEPTIONS=ON",
     "-D BUILD_SHARED_LIBS=ON",
 ]
@@ -55,6 +55,9 @@ test-command = "lmp -h && python {project}/tests/test_import.py"
 before-all = [
     "yum install -y wget libpng12-devel zlib-devel libjpeg-devel",
     '''/opt/python/cp38-cp38/bin/python -m pip install mpich''',
+]
+repair-wheel-command = [
+    "uvx --with 'patchelf<0.17' auditwheel repair -w {dest_dir} {wheel}",
 ]
 [tool.cibuildwheel.linux.environment]
 CMAKE_PREFIX_PATH="/opt/python/cp38-cp38/"
