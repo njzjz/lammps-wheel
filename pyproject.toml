@@ -57,7 +57,7 @@ before-all = [
     '''/opt/python/cp38-cp38/bin/python -m pip install mpich''',
 ]
 repair-wheel-command = [
-    "uvx -w 'patchelf<0.17' auditwheel repair -w {dest_dir} {wheel}",
+    "uvx --with 'patchelf<0.17' auditwheel repair -w {dest_dir} {wheel}",
 ]
 [tool.cibuildwheel.linux.environment]
 CMAKE_PREFIX_PATH="/opt/python/cp38-cp38/"
