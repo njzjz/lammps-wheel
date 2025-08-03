@@ -17,8 +17,8 @@ The package requires Python 3.7 and above. Most packages are enabled in this dis
 
 | OS      | Arch    | Bit | Conditions     | MPI           | 
 | ------- | ------- | --- | -------------- | ------------- |
-| Linux   | x86_64  | 64  | glibc >= 2.17  | MPICH         | 
-| Linux   | aarch64 | 64  | glibc >= 2.17  | MPICH         |
+| Linux   | x86_64  | 64  | glibc >= 2.28  | MPICH         | 
+| Linux   | aarch64 | 64  | glibc >= 2.28  | MPICH         |
 | macOS   | x86_64  | 64  | >= macOS-11    | MPICH         | 
 | macOS   | arm64   | 64  | >= macOS-11    | MPICH         |  
 | Windows | amd64   | 64  |                | Microsoft MPI |
@@ -53,3 +53,4 @@ some_plugin = "some_package:get_plugin_dir"
 ## License
 
 This package is distributed under the GNU General Public License, as the same as the original LAMMPS repository.
+
