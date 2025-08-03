@@ -53,7 +53,7 @@ test-command = "lmp -h && python {project}/tests/test_import.py"
 
 [tool.cibuildwheel.linux]
 before-all = [
-    "yum install -y wget libpng12-devel zlib-devel libjpeg-devel",
+    "yum install -y wget libpng12 zlib-devel libjpeg-turbo-devel",
     '''/opt/python/cp38-cp38/bin/python -m pip install mpich''',
 ]
 repair-wheel-command = [
