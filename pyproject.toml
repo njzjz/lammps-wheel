@@ -25,6 +25,9 @@ requires-python = ">=3.7"
 readme = "README.md"
 keywords = ["lammps"]
 
+[project.optional-dependencies]
+mpi = ["mpich"]
+
 [project.urls]
 repository = "https://github.com/njzjz/lammps-wheel"
 lammps_repository = "https://github.com/lammps/lammps"
@@ -50,6 +53,7 @@ build = ["cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
 build-verbosity = "1"
 test-command = "lmp -h && python {project}/tests/test_import.py"
+test-extras = ["mpi"]
 
 [tool.cibuildwheel.linux]
 before-all = [
