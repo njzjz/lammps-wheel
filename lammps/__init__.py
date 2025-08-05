@@ -5,6 +5,7 @@ LAMMPS module global members:
    module was taken from.  Has the same format as the
    result of :py:func:`lammps.version`.
 """
+import lammps.executable
 
 from .constants import *                # lgtm [py/polluting-import]
 from .core import *                     # lgtm [py/polluting-import]
