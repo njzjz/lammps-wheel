@@ -1,5 +1,8 @@
 [build-system]
-requires = ["scikit-build-core>=0.3.0"]
+requires = [
+    "scikit-build-core>=0.3.0",
+    "mpich",
+]
 build-backend = "scikit_build_core.build"
 
 [project]
@@ -58,7 +61,6 @@ test-extras = ["mpi"]
 [tool.cibuildwheel.linux]
 before-all = [
     "yum install -y wget libpng12 zlib-devel libjpeg-turbo-devel",
-    '''/opt/python/cp38-cp38/bin/python -m pip install mpich''',
 ]
 repair-wheel-command = [
     "uvx --with 'patchelf<0.17' auditwheel repair -w {dest_dir} {wheel} --exclude libmpi.so* --exclude libucp.so* --exclude libuct.so* --exclude libucs.so* --exclude libucm.so*",
@@ -68,9 +70,6 @@ CMAKE_PREFIX_PATH="/opt/python/cp38-cp38/"
 
 [tool.cibuildwheel.macos]
 
-before-all = [
-    '''pip install mpich''',
-]
 environment.MACOSX_DEPLOYMENT_TARGET = "11.0"
 
 [tool.cibuildwheel.windows]
