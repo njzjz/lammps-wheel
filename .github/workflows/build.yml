@@ -17,5 +17,5 @@ jobs:
         with:
           python-version: 3
       - name: Install package
-        run: pip install -v .
+        run: pip install -v .[mpi]
       - run: lmp -h
