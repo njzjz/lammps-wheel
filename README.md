@@ -9,6 +9,8 @@ This unofficial repository holds the code to build [LAMMPS](https://www.lammps.o
 
 ```sh
 pip install lammps
+# If you didn't install MPI
+pip install lammps[mpi]
 ```
 
 The package requires Python 3.7 and above. Most packages are enabled in this distribution. For the usage of LAMMPS, see [LAMMPS documentation](https://docs.lammps.org/).
