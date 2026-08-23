@@ -13,12 +13,11 @@ authors = [
   {name = "The LAMMPS Developers", email = "developers@lammps.org"},
   {name = "Jinzhe Zeng", email = "jinzhe.zeng@ustc.edu.cn"},
 ]
-license = {file = "LICENSE"}
+license = "GPL-2.0-only"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
-    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     "Operating System :: OS Independent",
 ]
 dependencies = [
